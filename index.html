@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPRCAS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flex.css">
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        .internal-h2 {
+            text-align: left;
+            color: brown;
+        }
+
+        .box-model-example {
+            background-color: rgb(70, 74, 94);
+            color: aquamarine;
+            text-align: center;
+            border: 5px solid greenyellow;
+            border-radius: 5px;
+            padding-left: 5px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2 class="box-model-example">Header Section</h2>
+        <nav class="flex-container">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <h2 id="internal-h2" class="h2" style="text-align: left; color:brown;">Main Section</h2>
+        <section class="flex-container">
+            <section>
+                <ul id="ul-style">
+                    <li><a href="https://kprcas.ac.in/" target="_blank">KPRCAS</a></li>
+                    <li><a href="https://www.kpriet.ac.in/">KPRIET</a></li>
+                    <li><a href="">Placements</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1 class="abc">This is my home page</h1>
+            </section>
+        </section>
+    </main>
+    <hr>
+    <h4><center>Interview Questions</center></h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fugit id vero beatae libero voluptates deleniti deserunt laborum iste quia laboriosam vitae aperiam, suscipit ratione, omnis, temporibus accusantium sequi reiciendis. Sapiente vel corporis eaque ipsa harum vero itaque excepturi sint placeat, magnam saepe quas autem quasi dicta omnis dolorem voluptate asperiores dignissimos. Quam reiciendis, aut magnam suscipit expedita cumque voluptates neque quos sint ipsam, deserunt accusantium quas, sit alias itaque ipsum atque sapiente totam eligendi delectus quo dolorum corporis quaerat a. Quia asperiores assumenda dolorum beatae illo alias, ratione, harum mollitia accusamus, blanditiis perferendis eius ducimus officiis! Nulla, aspernatur rerum maxime ut eum enim sequi ea iste possimus placeat eligendi blanditiis ad debitis dolor voluptatibus explicabo corporis nisi? Accusantium a saepe, eligendi illum voluptatum molestiae inventore similique fugiat voluptatem ipsam consequuntur, ad itaque, vitae natus soluta quod odit voluptatibus ullam libero dolore aliquid. Rem laborum nisi ipsa delectus recusandae laboriosam impedit, earum aperiam consequuntur dicta soluta enim vel non provident maxime a omnis distinctio suscipit, eum eveniet voluptates dignissimos. Officia voluptatum illum velit. Facere laudantium aspernatur, reiciendis incidunt optio obcaecati. In, totam libero hic fuga, consequuntur animi error ipsum quas repudiandae natus aperiam aspernatur. Recusandae non eligendi rem consequuntur voluptate.</p>
+    <p>1.Type 200 words under 2 seconds <br> Answer: <b>lorem200</b></p>
+    <p>2.Type 5 division tags under 2 seconds <br> Answer: <b>div*5</b></p>
+    <hr>
+    <h4 style="text-align: center;">Grid</h4>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+    <hr>
+    <footer>
+        <h2 style="margin: 10px; padding:20px; border: 10px solid red;">Footer Section</h2>
+        <section class="flex-container">
+            <section>
+                <form action="/submit-feedback" method="POST">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" required><br>
+                    <label for="feedback">Enter your Feedback: </label>
+                    <input type="text" name="feedback" required><br>
+                    <button type="submit">Submit</button>
+                </form>                
+            </section>
+            <section>
+                <address>
+                    <ul>
+                        <li>KPRCAS</li>
+                        <li>Computing Branch</li>
+                        <li>Uthupalayam</li>
+                        <li>email: <a href="mailto:kpr@kprcas.ac.in">kpr@kprcas.ac.in</a></li>
+                    </ul>
+                </address>
+            </section>
+        </section>
+    </footer>
+</body>
+
+</html>
