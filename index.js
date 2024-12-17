@@ -1,11 +1,12 @@
 var express = require("express");
 var path = require("path");
 var mdb = require("mongoose");
+var User = require("./models/userSchema");
 
 var app = express();
 
 mdb
-  .connect("mongodb://localhost:27017/kprcas")
+  .connect("mongodb+srv://kprcas:casfdp@cluster0.jvso6.mongodb.net/kprcas")
   .then(() => {
     console.log("MongoDB Connectionn Successful");
   })
@@ -38,10 +39,25 @@ app.get("/:page.html", (req, res) => {
   const page = req.params.page;
   res.sendFile(path.join(__dirname, "pages", `${page}.html`));
 });
-app.post("/submit-feedback", (req, res) => {
-  const { name, feedback } = req.body;
-  console.log(`Feedback received: ${name} - ${feedback}`);
-  res.redirect("/?feedback=success");
+
+app.post("/signup", (req, res) => {
+  var { username, email, password } = req.body;
+  console.log(username, email, password);
+  const user = new User({
+    username: username,
+    email: email,
+    password: password,
+  });
+  user
+    .save()
+    .then(() => {
+      console.log("New User Saved");
+      res.redirect("/?user-added-success");
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send("Invalid response");
+    });
 });
 
 app.listen(3001, () => {
